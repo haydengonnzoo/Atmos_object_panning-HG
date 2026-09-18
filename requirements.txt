@@ -1,0 +1,9 @@
+numpy
+opencv-python
+torch
+
+# SAM 2 (Meta) isn't on PyPI as a normal package — install from source:
+#   pip install "git+https://github.com/facebookresearch/sam2.git"
+# You'll also need the SAM 2.1 checkpoint, which is not part of the repo:
+#   download sam2.1_hiera_base_plus.pt from the SAM 2 repo's checkpoint links
+#   and place it at models/sam2.1_hiera_base_plus.pt
