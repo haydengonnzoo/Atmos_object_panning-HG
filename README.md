@@ -54,10 +54,10 @@ Working end to end: video -> tracked object -> validated Atmos automation -> con
 
 The tool runs on Python 3.
 
-\`\`\`bash
+```bash
 pip install -r requirements.txt
 pip install "git+https://github.com/facebookresearch/sam2.git"
-\`\`\`
+```
 
 Then download the SAM 2.1 checkpoint (`sam2.1_hiera_base_plus.pt`) from the
 [SAM 2 repo](https://github.com/facebookresearch/sam2) and place it at
@@ -65,9 +65,9 @@ Then download the SAM 2.1 checkpoint (`sam2.1_hiera_base_plus.pt`) from the
 
 Run the tool against a video file:
 
-\`\`\`bash
+```bash
 python click_and_pan.py path/to/your_video.mp4
-\`\`\`
+```
 
 It steps through the video shot by shot — click the object you want to track
 in each one, and SAM 2 tracks it, you confirm or revert, and it writes the
