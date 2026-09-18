@@ -1,4 +1,4 @@
-[READMEdolbyatmospanning.md](https://github.com/user-attachments/files/32251360/READMEdolbyatmospanning.md)
+
 # Video-Driven Dolby Atmos Object Panning
 
 > A pipeline that tracks moving objects in video and generates Dolby Atmos object-panning automation — then hands final placement judgment back to the mixer.
