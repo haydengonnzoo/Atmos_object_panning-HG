@@ -31,8 +31,6 @@ The panning automation isn't produced through a convenience library — it's wri
 - **Reverse-engineering the format against a real Pro Tools Atmos bounce** — bouncing a previous session, inspecting exactly how Pro Tools encodes object positions and movement, and matching that structure rather than guessing from spec alone.
 - Producing files that **validate on import**: confirmed that the authored automation lands on existing tracks with the intended positions and paths, not just that the file opens without error.
 
-This is the part that separates "I made a demo that looks plausible" from "I produced a file a real Atmos renderer and Pro Tools both accept as valid."
-
 ## Design decision: assisted, not autonomous
 
 The project originally aimed for *fully automatic* panning — video in, finished automation out. After building it, I concluded that full automation isn't trustworthy enough for production: tracking drifts, occlusion and re-identification are imperfect, and a wrong-but-confident pan is worse than no pan at all because it costs the mixer time to find and undo.
@@ -43,7 +41,7 @@ That trade-off — where automated spatial tooling genuinely helps versus where 
 
 ## Tech
 
-- **Object tracking:** SAM 2 (Meta), with depth and focus cues for subject isolation
+- **Object tracking:** SAM 2 (Meta), with depth and focus filters for subject isolation
 - **Metadata:** hand-authored ADM/BWF (`axml` / `chna` chunks)
 - **Target DAW:** Pro Tools + Dolby Atmos Renderer
 - **Language:** Python
