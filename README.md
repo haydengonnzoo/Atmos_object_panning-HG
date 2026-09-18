@@ -28,7 +28,7 @@ The pipeline runs in stages:
 The panning automation isn't produced through a convenience library — it's written at the metadata level. That meant:
 
 - Working directly with the **`axml`** and **`chna`** chunk structures inside the BWF/WAV container, at the byte level.
-- **Reverse-engineering the format against a real Pro Tools Atmos bounce** — bouncing a known session, inspecting exactly how Pro Tools encodes object positions and movement, and matching that structure rather than guessing from spec alone.
+- **Reverse-engineering the format against a real Pro Tools Atmos bounce** — bouncing a previous session, inspecting exactly how Pro Tools encodes object positions and movement, and matching that structure rather than guessing from spec alone.
 - Producing files that **validate on import**: confirmed that the authored automation lands on existing tracks with the intended positions and paths, not just that the file opens without error.
 
 This is the part that separates "I made a demo that looks plausible" from "I produced a file a real Atmos renderer and Pro Tools both accept as valid."
